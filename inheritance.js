@@ -1,34 +1,34 @@
-class animal {
+class Animal {
   constructor(animalName, noise) {
     this._animalName = animalName;
     this._noise = noise;
     console.log('animal constructor');
   }
-  get animalName() {
+  get AnimalName() {
     return this._animalName;
   }
-  get noise() {
+  get Noise() {
     return this._noise;
   }
 }
 
-class dog extends animal {
+class Dog extends Animal {
   constructor(lifespan) {
     super('DOG', 'BARKES');//animal constructor
     this._lifespan = lifespan;
     console.log('dog constructor');//dog constructor
   }
-  get lifespan() {
+  get Lifespan() {
     return this._lifespan;
   }
 }
 
-console.log(dog.animalName, dog.noise, dog.lifespan);//undefined undefined undefined
-console.log(animal.animalName, animal.noise, animal.lifespan);//undefined undefined undefined
+console.log(Dog.AnimalName, Dog.Noise, Dog.Lifespan);//undefined undefined undefined
+console.log(Animal.AnimalName, Animal.Noise, Animal.Lifespan);//undefined undefined undefined
 
-console.log(animal.name);//animal
-console.log(dog.name);//dog
-//so class.name is the name of the class
+console.log(Animal.name);//Animal
+console.log(Dog.name);//Dog
+//so class.name is the name of the class which have not defined but automatically gets defined
 
-var dogInstance = new dog(10);
-console.log(dogInstance.animalName, dogInstance.noise, dogInstance.lifespan);//DOG BARKES 10
+var dogInstance = new Dog(10);
+console.log(dogInstance.AnimalName, dogInstance.Noise, dogInstance.Lifespan);//DOG BARKES 10

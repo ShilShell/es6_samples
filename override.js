@@ -1,40 +1,40 @@
-class animal {
+class Animal {
   constructor(animalName, noise) {
     this._animalName = animalName;
     this._noise = noise;
     console.log('animal constructor');
   }
-  get animalName() {
+  get AnimalName() {
     return this._animalName;
   }
-  get noise() {
+  get Noise() {
     return this._noise;
   }
-  toString() {
+  ToString() {
     return this._animalName + ' ' + this._noise;
   }
 }
 
-class dog extends animal {
+class Dog extends Animal {
   constructor(lifespan) {
     super('DOG', 'BARKES');//animal constructor
     this._lifespan = lifespan;
     console.log('dog constructor');//dog constructor
   }
-  get lifespan() {
+  get Lifespan() {
     return this._lifespan;
   }
-  toString() {
-    return super.toString() + ' ' + this._lifespan;
+  ToString() {
+    return super.ToString() + ' ' + this._lifespan;
     //To access base methods/properties use super
   }
 }
 
-var dogInstance = new dog(10);
+var dogInstance = new Dog(10);
 //animal constructor
 //dog constructor
-console.log(dogInstance.animalName, dogInstance.noise, dogInstance.lifespan);//DOG BARKES 10
-console.log(dogInstance.toString());//DOG BARKES 10
+console.log(dogInstance.AnimalName, dogInstance.Noise, dogInstance.Lifespan);//DOG BARKES 10
+console.log(dogInstance.ToString());//DOG BARKES 10
 
-var animalInstance = new animal('SHEEP', 'MAA MAA');//animal constructor
-console.log(animalInstance.toString());//SHEEP MAA MAA
+var animalInstance = new Animal('SHEEP', 'MAA MAA');//animal constructor
+console.log(animalInstance.ToString());//SHEEP MAA MAA

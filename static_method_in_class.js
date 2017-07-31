@@ -1,16 +1,16 @@
-class animal {
+class Animal {
   constructor(animalName, noise) {
     this._animalName = animalName;
     this._noise = noise;
     console.log('animal constructor');
   }
-  get animalName() {
+  get AnimalName() {
     return this._animalName;
   }
-  get noise() {
+  get Noise() {
     return this._noise;
   }
-  static hasFourLegs(animalName) {
+  static IsFourLeged(animalName) {
     var ret = 'not sure';
     if (animalName === 'dog' || animalName === 'sheep' || animalName === 'cow') {
       ret = 'yes';
@@ -22,19 +22,21 @@ class animal {
   }
 }
 
-animal.eats = function (foodName) {
+Animal.Eats = function (foodName) {
   console.log('This animal eats ' + foodName);
 };
 
-animal.hasFourLegs('dog');//yes
-animal.eats('grass');//This animal eats grass
-//notice here eats method is added on animal class (so this like a static method)
+Animal.IsFourLeged('dog');//yes
+Animal.Eats('grass');//This animal eats grass
+//Here Eats method is added on animal class (so this like a static method)
 
-var animalInstance = new animal('sheep', 'maaa maaa');//animal constructor
-console.log(animalInstance.animalName, animalInstance.noise);//sheep maaa maaa
+var animalInstance = new Animal('sheep', 'maaa maaa');//animal constructor
+console.log(animalInstance.AnimalName, animalInstance.Noise);//sheep maaa maaa
 
-animalInstance.hasFourLegs('dog');//Uncaught TypeError: animalInstance.hasFourLegs is not a function
-//hasFourLegs method is invoked on animalInstance & since there is no implemention hence error
+Animal.IsFourLeged('dog');//This works because we are accessing static method of class so no instance required
+//animalInstance.IsFourLeged('dog');//Uncaught TypeError: animalInstance.hasFourLegs is not a function
+//IsFourLeged method is invoked on instance.
 
-animalInstance.eats('grass');//Uncaught TypeError: animalInstance.eats is not a function
-//eats method is invoked on animalInstance & since there is no implemention hence error
+Animal.Eats('grass');////This works because we are accessing static method of class so no instance required
+//animalInstance.Eats('grass');//Uncaught TypeError: animalInstance.eats is not a function
+//eats method is invoked on instance

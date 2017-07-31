@@ -2,7 +2,7 @@ function getAddress() {
   return { city: 'Coimbatore', state: 'Tamilnadu', country: 'India' };
 }
 
-let {city, state, country} = getAddress();
+let { city, state, country } = getAddress();
 console.log(city);//Coimbatore
 console.log(state);//Tamilnadu
 console.log(country);//India
@@ -13,7 +13,7 @@ console.log(city, state, country);//Coimbatore Tamilnadu India
 function getNames() {
   return { first: 'John', middle: 'Claude', last: 'Vandeme' };
 }
-let {first: f, middle: m, last: l} = getNames();
+let { first: f, middle: m, last: l } = getNames();
 console.log(f);//John
 console.log(m);//Claude
 console.log(l);//Vandeme
@@ -36,13 +36,13 @@ function processDetailsLegacy(obj) {
 processDetailsLegacy(empDetails);
 
 function processDetailsNew(obj) {
-  let {empid: eid, name, salary} = obj;
+  let { empid: eid, name, salary } = obj;
   console.log(eid, name, salary);//10982 "John" 2000000
 }
 processDetailsNew(empDetails);
 
 function processDetailsNewOrder(obj) {
-  let {salary, empid, name} = obj;
+  let { salary, empid, name } = obj;
   console.log(empid, name, salary);//10982 "John" 2000000
 }
 processDetailsNewOrder(empDetails);
