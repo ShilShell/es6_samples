@@ -1,13 +1,11 @@
 function getAddress() {
-  return { city: 'Coimbatore', state: 'Tamilnadu', country: 'India' };
+  return { city: 'Bangalore', state: 'Karnataka', country: 'India' };
 }
 
 let { city, state, country } = getAddress();
-console.log(city);//Coimbatore
-console.log(state);//Tamilnadu
+console.log(city);//Bangalore
+console.log(state);//Karnataka
 console.log(country);//India
-
-console.log(city, state, country);//Coimbatore Tamilnadu India
 
 //Alias---------------------------------------------
 function getNames() {

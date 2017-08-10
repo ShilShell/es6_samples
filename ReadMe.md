@@ -1,19 +1,17 @@
-This repository has sample codes for ECMA Script 6 a.k.a Harmony/ES.next
+You can find sample codes for ECMA Script 6. Here is the list of new features of ES6
 
-You can find sample codes for the following
-
-* Class
-* Inheritance
-* Set
-* Static Methods in Class
-* Rest Parameters
+* [Let](let.md)
+* [Const](const.md)
+* [Default Parameters](default-parameter.md)
 * Arrow Functions
-* Const
-* Default Parameters
-* Destructuring
-* Let
-* Map
-* Override method in Class
-* Template Literals
+* [Set](set.md)
+* [Class](class.md)
+  * Inheritance with Class
+  * Override method in Class
+  * [Static Methods in Class](static-method-class.md)
+* [Destructuring](destructuring.md)
+* [Map](map.md)
+* [Template Literals](template-literals.md)
 * Symbol
 * Spread Operator
+* Rest Parameters

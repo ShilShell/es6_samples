@@ -1,40 +1,19 @@
-var foo = function () { return 2; };
-var boo = () => 2;//No curly braces for single-line arrow function bodies
+//Parameterless Function
+var fn1 = function () { return 2; };//Traditional way to create a function
+var fn2 = () => { return 2 };
+var fn3 = () => 2;//Curly braces for single-line arrow function bodies optional
 
-console.log(foo());//2
-console.log(boo());//2
+console.log(fn1());//2
+console.log(fn2());//2
+console.log(fn3());//2
 
-//------------------------------------------------
-var foo2 = (val) => { return val; };
-console.log(foo2(33));//33
+//Functions with single parameter
+var fn4 = (val) => { return val; };
+console.log(fn4(33));//33
 
-var boo2 = val => { return val; };//Brackets optional for single parameter
-console.log(boo2(33));//33
+var fn5 = val => { return val; };//Brackets optional for single parameter
+console.log(fn5(33));//33
 
-//------------------------------------------------
-var foo3 = (val1, val2) => { console.log(val1, val2); };
-foo3(1, 2);//1 2
-//var boo3 = val1, val2 => { console.log(val1, val2); };//SyntaxError: Unexpected token =>
-
-//------------------------------------------------
-let nums = [1, 2, 3];
-let res = nums.map(x => x * x);
-console.log(res);
-
-//------------------------------------------------
-function Widget() {
-  this.Id = 222;
-  this.LogLegacy = function () {
-    console.log('Legacy', this.id);
-  };
-  this.LogNew = () => {
-    console.log('Arrow', this.id);
-  };
-};
-
-new Widget().LogLegacy();
-new Widget().LogNew();
-
-var settings = { Id: 555 };
-new Widget().LogLegacy.call(settings);
-new Widget().LogNew.call(settings);
+//Functions with multiple parameter
+var fn6 = (one, two) => { return { one, two }; };
+console.log(fn6(1, 2));//{ one: 1, two: 2 }

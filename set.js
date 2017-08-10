@@ -1,4 +1,4 @@
-//Set is like an array & has iterator property
+//Set is like an array and has iterator methods(entries and values)
 var set1 = new Set();
 set1.add(1);
 set1.add(2);
@@ -22,9 +22,13 @@ set3.add(1);
 console.log(set3.size);//2
 set3.delete(1);
 console.log(set3.size);//1
-console.log(set3);//Set{2}
+console.log(set3);//Set { 2 }
 
 var items = new Set([1, 2, 3, 3, 5, 5]);
-for (let num of items) {
-  console.log(num);
-}
+console.log(items);//Set { 1, 2, 3, 5 }
+console.log(items.size);//4
+
+var val = items.values();
+console.log(val.next().value);
+console.log(val.next().value);
+console.log(val.next().value);
