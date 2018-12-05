@@ -16,3 +16,11 @@ console.log(usCurrencyFormatEN.format(currencyToFormat));//$1,234,567.89
 
 var ukCurrencyFormatEN = new Intl.NumberFormat("en-UK", { style: "currency", currency: "GBP" });
 console.log(ukCurrencyFormatEN.format(currencyToFormat));//£1,234,567.89
+
+var dateToConvert = new Date("2016-01-22");
+
+var usDateFormat = new Intl.DateTimeFormat("en-US");
+console.log(usDateFormat.format(dateToConvert));//1/22/2016
+
+var inDateFormat = new Intl.DateTimeFormat("en-IN");
+console.log(inDateFormat.format(dateToConvert));//22/1/2016
