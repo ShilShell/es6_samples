@@ -12,6 +12,6 @@ You can find sample codes for ECMA Script 6. Here is the list of new features of
 * [Destructuring](destructuring.md)
 * [Map](map.md)
 * [Template Literals](template-literals.md)
-* Symbol
+* [Internationalization & Localization](InternationalizationAndLocalization.md)
 * [Spread Operator](spread-operator.md)
 * [Rest Parameters](rest-parameters.md)
