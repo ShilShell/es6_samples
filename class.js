@@ -20,8 +20,10 @@ class Animal {
 //var Animal = class {};//SyntaxError: Identifier 'Animal' has already been declared
 
 var dog = new Animal('dog', 'barks');
+console.log(typeof(Animal));//function
+console.log(typeof(dog));//object
+
 console.log(dog.Noise);//BARKS
-console.log(dog.name);//Animal
 console.log(dog.AnimalName);//DOG
 //So class.name is the name of the class which we have not defined but automatically gets defined
 

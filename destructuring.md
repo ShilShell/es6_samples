@@ -1,5 +1,7 @@
 # Destructuring Assignments
-Destructure means 'dismantle' as per dictionary. In JavaScript destructuring assignment expression makes it possible to unpack/dismantle values from array or properties. Lets jump into the sample code
+Destructure means `dismantle` as per dictionary. 
+
+In JavaScript destructuring assignment expression makes it possible to `unpack/dismantle` values from array or properties. Lets jump into the sample code
 
 ```javascript
 var empDetails = {
@@ -12,8 +14,8 @@ function process(obj) {
   var empid = obj.empid;
   var name = obj.name;
   var salary = obj.salary;
-  //do something...
   console.log(empid, name, salary);//10982 "John" 2000000
+  //do something...
 }
 
 process(empDetails);
@@ -23,17 +25,17 @@ Here is the traditional way of assigning each properties to the variables inside
 ```javascript
 function process(obj) {
   let { empid, name, salary } = obj;
-  //do something...
   console.log(empid, name, salary);//10982 "John" 2000000
+  //do something...
 }
 ```
-Here we have reduced 2 lines of code. Here if the object's property and varible name should match else it won't work. What if, if you don't want the varible name to be 'eid' instead of 'empid'
+Here we have reduced to a single line of code from 3 lines. Here if the object's property and varible name should match else it won't work. What if, if you don't want the varible name to be 'eid' instead of 'empid'
 
 ```javascript
 function process(obj) {
   let { empid: eid, name, salary } = obj;
-  //do something...
   console.log(eid, name, salary);//10982 "John" 2000000
+  //do something...
 }
 ```
 I have aliased the 'empid' with 'eid'. I have used the colon. Lets see what else destructuring can do
@@ -54,7 +56,8 @@ console.log(first, second, fifth);
 ```
 You can see there are mulitiple commas used with no variable names. 
 
-Previously in order to swap two variable we require 3 variables or have to do some calculations, now this can be done with ease. Similar kind of syntax available in python 
+Previously in order to swap two variable we require 3 variables or have to do some calculations, now this can be done with ease. Similar kind of syntax available in python
+ 
 ```javascript
 let a = 1;
 let b = 3;
@@ -63,4 +66,4 @@ let b = 3;
 console.log(a);
 console.log(b);
 ```
-I am into software development for quite over a decade and I see these kind of syntactical sugary features are really intersting and cool. There is a saying like *less luggage more comfort* in the same way *less code less lines to debug*
+I am into software development for quite over a decade and I see these kind of syntactical sugary features are really intersting and cool. There is a saying like *less luggage more comfort* in the same way *`less code less lines to debug`*

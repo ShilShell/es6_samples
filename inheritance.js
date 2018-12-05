@@ -3,10 +3,10 @@ class Animal {
     this._animalName = animalName;
     this._noise = noise;
   }
-  get AnimalName() {
+  get animalName() {
     return this._animalName;
   }
-  get Noise() {
+  get noise() {
     return this._noise;
   }
   static get DoesItEat() {
@@ -19,10 +19,11 @@ class Dog extends Animal {
     super('DOG', 'BARKS');//Animal constructor
     this._lifespan = 10;
   }
-  get Lifespan() {
+  get lifespan() {
     return this._lifespan;
   }
 }
 
 var dogInstance = new Dog();
-console.log(dogInstance.AnimalName, dogInstance.Noise, dogInstance.Lifespan);//DOG BARKS 10
+console.log(dogInstance.animalName, dogInstance.noise, dogInstance.lifespan);//DOG BARKS 10
+console.log(dogInstance);//Dog { _animalName: 'DOG', _noise: 'BARKS', _lifespan: 10 }

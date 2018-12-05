@@ -1,5 +1,5 @@
 # Set
-The Set lets you store unique values of any type (it can be primitive or object references types)
+The Set lets you store unique values of any type (it can be `primitive` or `object` types)
 
 Let us learn and understand more by looking from the below snippet code 
 ```javascript
@@ -13,7 +13,7 @@ console.log(set.has(1));//true
 console.log(set.has('1'));//false
 console.log(set.has(22));//false
 ```
-In the above snippet the object is created and 3 items are added to it. It has property to check the size and method 'has' to check if item already added.
+In the above snippet the object is created and 3 items are added to it. It has property to check the `size` and method `has` to check if item already exist.
 
 
 ```javascript

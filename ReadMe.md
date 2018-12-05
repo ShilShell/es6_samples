@@ -7,7 +7,7 @@ You can find sample codes for ECMA Script 6. Here is the list of new features of
 * [Set](set.md)
 * [Class](class.md)
   * [Inheritance with Class](inheritance.md)
-  * Override method in Class
+  * [Override method in Class](override.md)
   * [Static Methods in Class](static-method-class.md)
 * [Destructuring](destructuring.md)
 * [Map](map.md)

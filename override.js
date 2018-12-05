@@ -2,7 +2,7 @@ class Animal {
   constructor(animalName, noise) {
     this._animalName = animalName;
     this._noise = noise;
-    console.log('animal constructor');
+    console.log('Animal constructor');//Animal constructor
   }
   get AnimalName() {
     return this._animalName;
@@ -17,9 +17,9 @@ class Animal {
 
 class Dog extends Animal {
   constructor(lifespan) {
-    super('DOG', 'BARKES');//animal constructor
+    super('DOG', 'BARKES');//Animal constructor
     this._lifespan = lifespan;
-    console.log('dog constructor');//dog constructor
+    console.log('Dog constructor');//Dog constructor
   }
   get Lifespan() {
     return this._lifespan;
@@ -31,10 +31,10 @@ class Dog extends Animal {
 }
 
 var dogInstance = new Dog(10);
-//animal constructor
-//dog constructor
+//Animal constructor
+//Dog constructor
 console.log(dogInstance.AnimalName, dogInstance.Noise, dogInstance.Lifespan);//DOG BARKES 10
 console.log(dogInstance.ToString());//DOG BARKES 10
 
-var animalInstance = new Animal('SHEEP', 'MAA MAA');//animal constructor
+var animalInstance = new Animal('SHEEP', 'MAA MAA');//Animal constructor
 console.log(animalInstance.ToString());//SHEEP MAA MAA
